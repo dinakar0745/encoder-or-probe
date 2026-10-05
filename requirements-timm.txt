@@ -1,0 +1,10 @@
+# Separate environment used only to extract Kaiko ViT-B/16 embeddings. Python 3.14.
+# timm needs torchvision; keeping it out of the main environment leaves the
+# transformers preprocessing for the other encoders unchanged.
+#   pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+torchvision==0.26.0
+timm==1.0.30
+numpy==2.5.2
+pillow==12.3.0
+scikit-image==0.26.0

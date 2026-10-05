@@ -1,0 +1,12 @@
+# Main environment (Phikon, Phikon-v2, DINOv2-L, probes, figures). Python 3.14.
+# Install torch separately with the build that matches your GPU, for example:
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+transformers==5.18.0
+numpy==2.5.3
+scipy==1.18.1
+pillow==12.3.0
+scikit-image==0.26.0
+scikit-learn==1.9.1
+matplotlib==3.11.2
+h5py==3.16.0

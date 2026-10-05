@@ -1,0 +1,22 @@
+# Environments and caches
+.venv/
+.venv-timm/
+__pycache__/
+*.pyc
+
+# Downloaded datasets and extracted embeddings (large; regenerate with the scripts)
+data/
+embeddings/
+
+# Early exploratory outputs, superseded by results_*_c1 and results_*_c001
+/figures/
+/results_pcam/
+/drift.csv
+/mitigation.csv
+/per_class.csv
+/results.csv
+/phikon.csv
+/phikon-v2.csv
+/probe_sanity.csv
+/mit_*.csv
+*.zip
