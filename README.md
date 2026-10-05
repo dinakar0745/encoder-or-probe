@@ -2,6 +2,8 @@
 
 Acquisition-artifact robustness of pathology foundation models under linear probing.
 
+**Report:** [doi.org/10.5281/zenodo.23162508](https://doi.org/10.5281/zenodo.23162508) (PDF also in `paper/`)
+
 Pathology foundation models are usually tested for robustness by training a linear probe on clean images and testing it on degraded ones. This repository asks how much of the measured accuracy drop belongs to the frozen encoder and how much to the probe.
 
 **Short answer:** a large part belongs to the probe. Letting the probe see some degraded images during training, with the encoder still frozen, recovers most of the accuracy lost to JPEG compression and stain shift, and changes which encoder looks most robust.
@@ -71,6 +73,7 @@ results_nct_c001/       NCT-CRC-HE, C = 0.001
 results_pcam_c1/        PatchCamelyon, C = 1
 results_pcam_c001/      PatchCamelyon, C = 0.001
 paper_figures/          summary figures (PNG and PDF)
+paper/                  the report (PDF and LaTeX source)
 ```
 
 Each results folder holds `mitigation.csv`, `drift.csv`, `per_class.csv` and per-encoder plots.
@@ -152,7 +155,7 @@ No evaluation slide appears in the published pretraining data of any encoder. Ph
 
 ## Licences and attribution
 
-The code here is the author's own. The models and datasets keep their own terms:
+The code and result files in this repository are released under the MIT licence (see `LICENSE`). That licence does not cover the models or datasets, which keep their own terms:
 
 | Resource | Source | Terms |
 |---|---|---|
@@ -169,6 +172,13 @@ This work is non-commercial research. Check each model card before any other use
 - Yajnik, Asif and Minhas (2026). *The Good, the Bad, and the Brittle.* [arXiv:2607.04401](https://arxiv.org/abs/2607.04401). Benchmarks 12 pathology foundation models under optimised perturbations with clean-trained linear probes.
 - Hasan, Faruk and El-Sakka (2026). *Compression-Induced Representation Drift in Pathology Foundation Models.* [Electronics 15(18), 4186](https://www.mdpi.com/2079-9292/15/18/4186). Measures embedding drift under JPEG2000 without downstream accuracy.
 - Filiot et al. (2024). *Phikon-v2.* [arXiv:2409.09173](https://arxiv.org/abs/2409.09173).
+
+## Citation
+
+```
+Pathakota, D. (2026). Is It the Encoder or the Probe? Acquisition-Artifact Robustness of
+Pathology Foundation Models. Zenodo. https://doi.org/10.5281/zenodo.23162508
+```
 
 ## Author
 
